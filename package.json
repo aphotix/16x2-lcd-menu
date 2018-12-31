@@ -1,0 +1,28 @@
+{
+  "name": "16x2-lcd-menu",
+  "version": "0.0.1",
+  "description": "Library to quickly set up config menus on a 16x2 lcd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aphotix/16x2-lcd-menu.git"
+  },
+  "keywords": [
+    "Adafruit",
+    "16x2",
+    "Raspberry",
+    "Pi"
+  ],
+  "author": "David Tompkins <david@zde.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aphotix/16x2-lcd-menu/issues"
+  },
+  "homepage": "https://github.com/aphotix/16x2-lcd-menu#readme",
+  "dependencies": {
+    "adafruit-i2c-lcd": "^1.0.2"
+  }
+}
