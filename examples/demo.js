@@ -1,5 +1,5 @@
-const adaLcd = require('../lib/16x2_adafruit_lcd.js');
-const LCDMENU = new adaLcd.LCDMENU(60);
+const LCDMENU = require('../index');
+const lcdMenu = new LCDMENU(60, true); // 60 second timeout
 
 var num = 1;
 
@@ -40,7 +40,7 @@ const menus = [
       left: 'topLevel',
     },
     data: getNum,
-    template: ['Current Num: ${num}', '< Left to exit'],
+    template: ['Current Num: ${num}', '< Left to return'],
   },
   {
     id: 'secondaryMenu',
@@ -60,19 +60,15 @@ const menus = [
 ];
 
 
-menus.forEach((menu) => LCDMENU.addMenu(menu));
+menus.forEach((menu) => lcdMenu.addMenu(menu));
 
-LCDMENU.init();
+lcdMenu.init();
 
 process.on('exit', () => {
   console.log('exit')
-  adaLcd.lcd.clear();
-	adaLcd.lcd.backlight(adaLcd.lcd.colors.OFF);
-  adaLcd.lcd.close();
+  lcdMenu.close();
 });
 process.on('SIGINT', () => {
   console.log('ctrl c')
-  adaLcd.lcd.clear();
-  adaLcd.lcd.backlight(adaLcd.lcd.colors.OFF);
-  adaLcd.lcd.close();
+  lcdMenu.close();
 });
