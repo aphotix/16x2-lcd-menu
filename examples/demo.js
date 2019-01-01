@@ -5,14 +5,15 @@ var num = 1;
 
 const incrementNum = () => {
   num++;
-  return;
+  return Promise.resolve();
 }
 
 const decrementNum = () => {
   num--;
+  // return Promise.resolve();
 }
 
-const getNum = () => {num};
+const getNum = () => ({num});
 
 const menus = [
   {
@@ -21,6 +22,7 @@ const menus = [
     enabled: true,
     actions: {
       right: 'secondaryMenu',
+      down: 'menuDown',
     },
     template: [
       'Welcome to',
