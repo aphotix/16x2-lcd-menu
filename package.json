@@ -1,11 +1,8 @@
 {
   "name": "16x2-lcd-menu",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Library to quickly set up config menus on a 16x2 lcd",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aphotix/16x2-lcd-menu.git"
