@@ -1,6 +1,6 @@
 {
   "name": "16x2-lcd-menu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Library to quickly set up config menus on a 16x2 lcd",
   "main": "index.js",
   "repository": {
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/aphotix/16x2-lcd-menu#readme",
   "dependencies": {
-    "adafruit-i2c-lcd": "^1.0.2"
+    "adafruit-i2c-lcd": "^2.0.0"
   }
 }
